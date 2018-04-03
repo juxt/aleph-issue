@@ -10,4 +10,6 @@
 
 (def server (http/start-server handler {:port 8080}))
 
-(.close server)
+;; Start the server, as above, then call .close on the result, then start up again.
+;; curl then seems to hang.
+;; (.close server)
